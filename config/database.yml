@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+
+development:
+  <<: *default
+  database: rails_modern_frontend_development
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+
+test:
+  <<: *default
+  database: rails_modern_frontend_test
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+
+production:
+  <<: *default
+  database: rails_modern_frontend_production
