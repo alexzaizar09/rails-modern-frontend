@@ -1,5 +1,6 @@
-<article class="my-4">
-    <div class="grid gap-4 grid-cols-5">
+<%= turbo_frame_tag(dom_id(concert)) do %>
+  <article class="my-4">
+    <div class="grid grid-cols-5 gap-4">
       <div class="col-span-1 text-xl">
         <%= concert.start_time.by_example("3:04 PM") %>
       </div>
@@ -15,11 +16,11 @@
         <div class="genres">
           <%= concert.genre_tags.split(",").to_sentence %>
         </div>
-        <div class="text-gray-500 font-bold">
+        <div class="font-bold text-gray-500">
           <%= concert.venue.name %>
         </div>
       </div>
-      <div class="col-span-1 text-xl my-10">
+      <div class="col-span-1 my-10 text-xl">
         <% if concert.sold_out? %>
           Sold out
         <% else %>
@@ -55,4 +56,4 @@
       </div>
     </div>
   </article>
-
+<% end %>
