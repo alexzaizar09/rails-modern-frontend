@@ -1,5 +1,9 @@
 class FavoritesController < ApplicationController
   def index
+    if params[:count_only]
+      @count = current_user&.favorites&.count
+      render(partial: "favorites/count")
+    end
   end
 
   def create
