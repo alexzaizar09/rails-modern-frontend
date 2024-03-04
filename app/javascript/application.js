@@ -1,3 +1,3 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
-import "./components/show_venue"
+import "./components/venue/show_venue"
