@@ -1,4 +1,3 @@
-
 class GigsController < ApplicationController
   before_action :set_gig, only: %i[show edit update destroy]
 

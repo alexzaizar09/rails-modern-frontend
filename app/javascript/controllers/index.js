@@ -4,8 +4,11 @@
 
 import { application } from "./application"
 
-import FavoriteToggleController from "./favorite_toggle_controller"
-application.register("favorite-toggle", FavoriteToggleController)
+import CssController from "./css_controller.ts"
+application.register("css", CssController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import CssFlipController from "./css_flip_controller.ts"
+application.register("css-flip", CssFlipController)
+
+import TextController from "./text_controller.ts"
+application.register("text", TextController)

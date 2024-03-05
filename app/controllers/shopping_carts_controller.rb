@@ -1,4 +1,3 @@
-
 class ShoppingCartsController < ApplicationController
   before_action :set_shopping_cart, only: %i[show edit update destroy]
 

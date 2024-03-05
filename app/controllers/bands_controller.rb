@@ -1,4 +1,3 @@
-
 class BandsController < ApplicationController
   before_action :set_band, only: %i[show edit update destroy]
 

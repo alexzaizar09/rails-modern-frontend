@@ -1,4 +1,3 @@
-
 class CreateConcerts < ActiveRecord::Migration[7.0]
   def change
     create_enum :enum_ilk, %w[concert meet_n_greet battle]

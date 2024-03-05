@@ -1,4 +1,3 @@
-
 ActiveRecord::Base.transaction do
   Gig.delete_all
   Ticket.delete_all

@@ -1,4 +1,3 @@
-
 class TicketOrdersController < ApplicationController
   before_action :set_ticket_order, only: %i[show edit update destroy]
 

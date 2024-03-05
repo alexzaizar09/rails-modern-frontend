@@ -1,4 +1,3 @@
-
 GENRES = [
   "Adult Contemporary",
   "Alternative Rock",

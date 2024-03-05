@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: shopping_carts

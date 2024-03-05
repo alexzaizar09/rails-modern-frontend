@@ -1,4 +1,3 @@
-
 class ConcertsController < ApplicationController
   before_action :set_concert, only: %i[show edit update destroy]
 
@@ -42,11 +41,16 @@ class ConcertsController < ApplicationController
   def update
     respond_to do |format|
       if @concert.update(concert_params)
-        format.html { render @concert, notice: "Concert was successfully updated." }
+        format.html { render(@concert) }
         format.json { render :show, status: :ok, location: @concert }
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @concert.errors, status: :unprocessable_entity }
+        format.html { render(:edit) }
+        format.json {
+          render(
+            json: @concert.errors,
+            status: :unprocessable_entity
+          )
+        }
       end
     end
   end

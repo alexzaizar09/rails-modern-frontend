@@ -1,4 +1,3 @@
-
 module ApplicationHelper
   def color_for(ticket, user)
     case ticket.status

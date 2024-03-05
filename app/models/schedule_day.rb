@@ -1,4 +1,3 @@
-
 class ScheduleDay
   include ActiveModel::Model
   attr_accessor :day, :concerts, :hidden
